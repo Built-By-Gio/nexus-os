@@ -6,6 +6,8 @@ Built by Gio ([Built-By-Gio](https://github.com/Built-By-Gio)).
 
 ## Status (2026-11-25)
 
+The app is built, has been launched and tested by hand many times, and is still a work in progress.
+
 Working, as recorded in the project's own test notes:
 
 - 2026-10-15: `npm start` built and opened the full dashboard with live CPU, memory, network and weather; `npm run dev` connected Vite hot reload.
