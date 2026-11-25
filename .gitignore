@@ -1,0 +1,25 @@
+node_modules
+dist
+*.log
+.vs
+.vscode
+.idea
+src-tauri
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# local working notes (kept on disk, not published)
+AGENTS.md
+tasks/
+LOG.md
+PROJECT.md
+
+# local secrets / env
+.env
+.env.*
+
+# template app icon from the old Tauri scaffold (third-party logo, kept on disk only)
+build/icon.ico
