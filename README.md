@@ -8,22 +8,22 @@ Built by Gio ([Built-By-Gio](https://github.com/Built-By-Gio)).
 
 The app is built, has been launched and tested by hand many times, and is still a work in progress.
 
-Working, as recorded in the project's own test notes:
+Working:
 
 - 2026-10-15: `npm start` built and opened the full dashboard with live CPU, memory, network and weather; `npm run dev` connected Vite hot reload.
-- 2026-10-15: local AI tested on one PC with an 8 GB NVIDIA GPU: about 28 tokens/s, about 18 s model load, tool calls work, image input works, and Agent Mode finished a two-step job.
+- 2026-10-15: local AI tested on my PC with an 8 GB NVIDIA GPU: about 28 tokens/s, about 18 s model load, tool calls work, image input works, and Agent Mode finished a two-step job.
 - 2026-10-16: dashboard telemetry no longer starts a new process every tick (measured 9 process spawns per 10 s before, 0 after), which removed a constantly spinning busy cursor.
 - 2026-11-25: `npm run build` (Vite production build) of this exact commit completes without errors.
 
-Not tested / known problems:
+Known problems:
 
-- There are no automated tests. Everything above was checked by hand on one Windows PC.
+- Not done yet: automated tests. Everything above was tested by hand on my Windows PC.
 - Wake word and push-to-talk voice input do not work under Electron (browser speech recognition is not available there). A local speech-to-text engine is the likely fix.
 - The window icon file (`build/icon.ico`) is not included, so the app uses the default icon.
 - Gateway latency stays on "Measuring" on networks whose router ignores ping.
-- Ollama's CUDA 13 backend crashed on about 1 in 5 cold model loads on the test PC; the app forces the CUDA 12 backend when an NVIDIA card is present and retries a failed load once.
+- Ollama's CUDA 13 backend crashed on about 1 in 5 cold model loads on my PC; the app forces the CUDA 12 backend when an NVIDIA card is present and retries a failed load once.
 
-Unfinished: most of the roadmap (see below). Phase 1 is half done (event bus built, agent tool schema not yet), and Phases 2 to 5 have not started.
+Unfinished: most of the roadmap (see below). Phase 1 is half done (event bus built, agent tool schema not built yet), and Phases 2 to 5 have not started.
 
 ## What you need
 
@@ -82,7 +82,7 @@ From `ROADMAP.md` and `CHECKLIST.md`. Some items there were written for the earl
 
 ## Credits
 
-- The audio tracks in `public/` (tutorial and tour audio: `tutorial-1.mp3`, `tutorial-2.mp3`, `about-tour.mp3`) were made by Gio.
+- The audio tracks in `public/` (tutorial and tour audio: `tutorial-1.mp3`, `tutorial-2.mp3`, `about-tour.mp3`) were made by me.
 - Fonts IBM Plex Mono, IBM Plex Sans and VT323 are bundled through the `@fontsource` npm packages (SIL Open Font License).
 
 ### Contributors
